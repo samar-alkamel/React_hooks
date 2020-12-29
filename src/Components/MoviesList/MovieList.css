@@ -1,0 +1,14 @@
+.MovieList{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.MovieList >  * {
+    margin: 8%;
+}
+a:link,
+a:visited{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}

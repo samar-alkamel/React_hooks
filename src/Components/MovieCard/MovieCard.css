@@ -1,0 +1,12 @@
+.cardFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rateStars{
+    font-size: 22px;
+    color:rgba(255, 175, 1, 0.63);
+}
+.movieImg{
+    height: 30%;
+}

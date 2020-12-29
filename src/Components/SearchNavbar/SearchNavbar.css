@@ -1,0 +1,13 @@
+.SearchNavbar{
+    width: 100%;
+    height: 75%;
+}
+.SearchArea{
+width: 50% !important;
+}
+.SearchInput{
+    width: 70% !important;
+}
+.navbar{
+    height: 75px;
+}
