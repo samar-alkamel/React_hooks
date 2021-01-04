@@ -10,3 +10,6 @@
 .movieImg{
     height: 30%;
 }
+a:hover{
+    text-decoration: none;
+}

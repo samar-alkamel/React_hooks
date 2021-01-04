@@ -18,7 +18,7 @@ function Addmovie(props) {
        if(title && description && posterUrl && rate && trailerUrl){
          props.setNewMovie(newMovie)
          setNewMovie({title:"" ,description:"" ,posterUrl:"",rate: 0, trailerUrl:""})
-
+         props.setFirstRender(false)
          handleClose()
        }
        else

@@ -5,7 +5,7 @@ import "./MovieList.css";
 import { Fragment } from 'react';
 
 const MoviesList=(props)=> {
-    const {moviesList,searchInput,searchRating,setNewMovie} =props  
+    const {moviesList,searchInput,searchRating,setNewMovie,setFirstRender} =props  
    // cosloe.log("this data is from movielist component:" , props.MoviesList);
     return (
         <div className="MovieList">
@@ -14,7 +14,7 @@ const MoviesList=(props)=> {
            <MovieCard  movie={movie} key={index}/>
            : <Fragment key ={index}></Fragment>
           )}
-          <Addmovie  setNewMovie={setNewMovie}/>
+          <Addmovie  setNewMovie={setNewMovie} setFirstRender={ setFirstRender}/>
         </div>
     )
 }

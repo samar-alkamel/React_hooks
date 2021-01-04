@@ -1,4 +1,4 @@
-import { useState } from "react"
+// import { useState } from "react"
 import {Navbar ,Nav ,Form  ,FormControl} from "react-bootstrap"
 import "./SearchNavbar.css"
 import ReactStars from "react-rating-stars-component"
@@ -16,7 +16,7 @@ function SearchNavbar(props){
   };
 return(
     <Navbar bg="dark" variant="dark" className="SearchNavbar">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home"> Movies</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#features">Features</Nav.Link>

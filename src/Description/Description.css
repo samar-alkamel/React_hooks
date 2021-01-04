@@ -1,0 +1,19 @@
+#description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#description h4,
+iframe{
+    width: 60%;
+    margin: 3%;
+}
+.descText{
+    color: white;
+    background-color: rgb(12, 12,12);
+    padding: 3%;
+    border: 4px white solid;
+border-radius: 20%;
+
+}
