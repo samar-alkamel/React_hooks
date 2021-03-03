@@ -16,7 +16,7 @@ function SearchNavbar(props){
   };
 return(
     <Navbar bg="dark" variant="dark" className="SearchNavbar">
-    <Navbar.Brand href="#home"> Movies</Navbar.Brand>
+    <Navbar.Brand href="#home"> Card</Navbar.Brand>
     <Nav className="mr-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#features">Features</Nav.Link>

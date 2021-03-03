@@ -1,23 +1,23 @@
 import React,{useState} from 'react';
 import {Modal,Button, Card, Form} from 'react-bootstrap';
-import "./Addmovie.css";
-function Addmovie(props) {
+import "./Add.css";
+function Add(props) {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const[newMovie,setNewMovie] = useState({ title: "", description:"", posterUrl:"", rate: 0, trailerUrl:""})
-    // const [newMovie ,setNewMovie]= useState({})
+    const[newMovie,setNewMovie] = useState({ title: "", description:"", poster:""})
+    
 
     const handleChange = (e) =>{
-          setNewMovie({...newMovie,[e.target.name]:e.target.value})
+          setNewM({...newM,[e.target.name]:e.target.value})
     }
      const handleSubmit =()=>{
-       const {title,description,posterUrl,rate,trailerUrl} = newMovie
-       if(title && description && posterUrl && rate && trailerUrl){
-         props.setNewMovie(newMovie)
-         setNewMovie({title:"" ,description:"" ,posterUrl:"",rate: 0, trailerUrl:""})
+       const {title,description,poster} = newM
+       if(title && description && posterUrl ){
+         props.setNewMovie(newM)
+         setNewM({title:"" ,description:"" ,poster:""})
          props.setFirstRender(false)
          handleClose()
        }
@@ -35,15 +35,15 @@ function Addmovie(props) {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Add a new movie</Modal.Title>
+            <Modal.Title>Add commants</Modal.Title>
           </Modal.Header>
           <Modal.Body className="inputArea">
            
-           <Form.Control text="text" placeholder="Enter movie title."name="title" onChange={handleChange}/>
-           <Form.Control as="textarea" placeholder="Enter movie Description."name="description"onChange={handleChange}/>
-           <Form.Control text="text" placeholder="Enter movie poster Url."name="posterUrl"onChange={handleChange}/>
-           <Form.Control text="text" placeholder="Enter movie rate."name="rate"onChange={handleChange}/>
-           <Form.Control text="text" placeholder="Enter movie trailer Url."name="trailerUrl"onChange={handleChange}/>
+           <Form.Control text="text" placeholder="Enter  title."name="title" onChange={handleChange}/>
+           <Form.Control as="textarea" placeholder="Enter  Description."name="description"onChange={handleChange}/>
+           {/* <Form.Control text="text" placeholder="Enter movie poster Url."name="posterUrl"onChange={handleChange}/> */}
+           {/* <Form.Control text="text" placeholder="Enter movie rate."name="rate"onChange={handleChange}/> */}
+           {/* <Form.Control text="text" placeholder="Enter movie trailer Url."name="trailerUrl"onChange={handleChange}/> */}
            
           </Modal.Body>
           <Modal.Footer>
@@ -59,4 +59,4 @@ function Addmovie(props) {
     );
   }
   
-  export default Addmovie
+  export default Add

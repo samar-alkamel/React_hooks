@@ -1,6 +1,6 @@
 import React from 'react';
-import MovieCard from '../MovieCard/MovieCard';
-import Addmovie from "../Addmovie/AddMovie";
+import MovieCard from '../Card/Card';
+import Addmovie from "../Add/Add";
 import "./MovieList.css";
 import { Fragment } from 'react';
 
@@ -10,11 +10,11 @@ const MoviesList=(props)=> {
     return (
         <div className="MovieList">
             {/* <!-- eslint-disable-next -line --> */}
-          {moviesList.map((movie,index) => movie.rate >=searchRating && movie.title.toUpperCase().startsWith(searchInput.toUpperCase())?
-           <MovieCard  movie={movie} key={index}/>
+          {List.map((m,index) => m.rate >=searchRating && m.title.toUpperCase().startsWith(searchInput.toUpperCase())?
+           <MovieCard  m={m} key={index}/>
            : <Fragment key ={index}></Fragment>
           )}
-          <Addmovie  setNewMovie={setNewMovie} setFirstRender={ setFirstRender}/>
+          <Add  setNewM={setNewM} setFirstRender={ setFirstRender}/>
         </div>
     )
 }

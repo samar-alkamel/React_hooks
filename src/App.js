@@ -1,28 +1,27 @@
  import React, { useEffect } from "react"
 import "./App.css";
 import SearchNavbar from "./Components/SearchNavbar/SearchNavbar";
-import moviesData from "./Components/moviesData";
+import Data from "./Components/Data";
 import  {useState} from "react";
-import MovieList from "./Components/MoviesList/MoviesList";
+import List from "./Components/List/List";
 import Description from "./Description/Description";
 import { Route ,Switch } from "react-router-dom";
 import { Fragment } from "react";
-// import Addmovie from "./Components/Addmovie/AddMovie";
-// import MovieCard from "./Components/MovieCard/MovieCard";
+
 
 function App() {
-  const [moviesList,setMoviesList] =useState(moviesData);
+  const [List,setMList] =useState(Data);
   const [searchInput,setSearchInput] = useState(""); 
   const [searchRating,setSearchRating]=useState(0);
-  const[newMovie,setNewMovie] = useState({});
+  const[newM,setM] = useState({});
   const[firstRender,setFirstRender]= useState(true);
 
   useEffect(() => {
     !firstRender
-    ? setMoviesList([...moviesList,newMovie])
+    ? setMList([...List,newM])
          : console.log("this is the firstrender")
    // eslint-disable-next-line‏
-  }, [newMovie]);
+  }, [newM]);
   
   return (
     <div className="App">
@@ -36,20 +35,20 @@ function App() {
      setSearchInput= {setSearchInput}
      setSearchRating= {setSearchRating} 
      />
-    <MovieList
-     moviesList= {moviesList}
+    <List
+     mList= {mList}
      searchInput={searchInput}
      searchRating ={searchRating}
-     setNewMovie={setNewMovie}
+     setN={setN}
      setFirstRender={setFirstRender}
      />
      </Fragment>
      )}
      />
      <Route 
-      path="/movies/:id"
+      path="/m/:id"
       render={({match})=> (
-       <Description match={match}  moviesList={moviesList}/> 
+       <Description match={match}  List={List}/> 
       )}
       />
      </Switch>
